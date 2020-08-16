@@ -101,6 +101,10 @@ body {
   text-align: center;
 }
 
+.block__del :active, .block__reset :active {
+  font-size: 20px;
+}
+
 .block__item {
   background: white;
   -ms-flex-item-align: center;
@@ -124,5 +128,9 @@ body {
 
 .block__item p {
   text-align: center;
+}
+
+.block__item :active {
+  font-size: 30px;
 }
 /*# sourceMappingURL=style.css.map */

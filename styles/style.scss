@@ -80,6 +80,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
     box-shadow: 0 0 0 5px hsl(0, 0%, 80%);
     font-family: Chilanka, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 30px;
+    :active {
+    font-size: 20px;}
 }
 
 .block__item {
@@ -98,5 +100,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
     border-radius: 5px;
     box-shadow: 0 0 0 5px hsl(0, 0%, 80%);
     margin: 5px;
+    :active {
+        font-size: 30px;}
 }
 
