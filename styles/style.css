@@ -57,20 +57,20 @@ body {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  font-size: 15px;
-  margin: 5px;
+  font-size: 25px;
+  margin: 0px;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 100%;
           flex: 0 1 100%;
   border: 1px solid black;
   border-radius: 5px;
-  padding: 10px 10px;
-  font-family: Chilanka, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 10px 5px 0px 0px;
+  font-family: Verdana, sans-serif;
   line-height: 30px;
 }
 
 .block__display p {
-  text-align: center;
+  text-align: right;
 }
 
 .block__del, .block__reset {
@@ -132,5 +132,13 @@ body {
 
 .block__item :active {
   font-size: 30px;
+}
+
+.operator {
+  background: #b3be0b;
+}
+
+#enter {
+  background: #f3b304;
 }
 /*# sourceMappingURL=style.css.map */

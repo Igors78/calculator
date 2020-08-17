@@ -49,16 +49,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
 .block__display {
     background: white;
     align-self: center;
-    font-size: 15px;
-    margin: 5px;
+    font-size: 25px;
+    margin: 0px;
     flex: 0 1 100%;
     p {
-        text-align: center;
+        text-align: right;
     }
     border: 1px solid black;
     border-radius: 5px;
-    padding: 10px 10px;
-    font-family: Chilanka, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px 5px 0px 0px;
+    font-family: Verdana, sans-serif;
     line-height: 30px;
 }
 .block__del, .block__reset {
@@ -102,5 +102,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
     margin: 5px;
     :active {
         font-size: 30px;}
+    
 }
-
+.operator {
+    background: rgb(179, 190, 11);
+}
+#enter {
+    background: rgb(243, 179, 4);
+}
