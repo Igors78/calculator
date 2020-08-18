@@ -6,18 +6,26 @@ const period = document.querySelector('#period');
 const numbers = Array.from(document.querySelectorAll('.number'));
 const operators = Array.from(document.querySelectorAll('.operator'));
 let displayValue = '';
-console.log(numbers);
-console.log(operators);
+let x = '';
+let y = '';
+let op = '';
+let count = 0;
+//console.log(numbers);
+//console.log(operators);
 
 numbers.forEach(number => number.addEventListener('click', updateDisplay));
-//operators.forEach(operator => operator.addEventListener('click', addOperator));
-//del.addEventListener('click', removeFromDisplay);
-//enter.addEventListener('click', calculate);
-//reset.addEventListener('click', clearDisplay);
+operators.forEach(operator => operator.addEventListener('click', addOperator));
+del.addEventListener('click', removeFromDisplay);
+enter.addEventListener('click', calculate);
+reset.addEventListener('click', clearDisplay);
 period.addEventListener('click', addPeriod);
 
 function updateDisplay(e) {
-    console.log(e.target.textContent);
+    if (count > 0){
+        displayValue = e.target.textContent;
+        count = 0;
+        display.textContent = displayValue;
+    }else
     if (display.textContent.length == 16) {
         return;
     }else if (display.textContent === '0' && e.target.textContent == 0){
@@ -36,11 +44,74 @@ function addPeriod(e) {
     display.textContent = displayValue;
     console.log(displayValue);
 }
+function removeFromDisplay(_e){
+    if (display.textContent == '0'){
+        return;
+    }else if (display.textContent.length == 1){
+        displayValue = '';
+        display.textContent = '0';
+    }else{
+        displayValue = display.textContent.slice(0, -1);
+        display.textContent = displayValue;
+    }
+}
+function clearDisplay(_e) {
+    displayValue = '';
+    display.textContent = '0';
+    x = '';
+    y = '';
+    op = '';
+}
 
-//function addOperator(e) {
+function addOperator(e) {
+    console.log(op);
+    if (op != ''){
+        calculate(e);
+    }
+    op = e.target.textContent;
+    x = Number(displayValue);
+    displayValue = '';
 
-//}
+    console.log(x);
 
+}
+function calculate(e) {
+    if (e.target.textContent == '='){count++};
+    y = Number(displayValue);
+    console.log(y);
+    if (x != '' && y != '') {
+    
+    if (op == '+'){
+        displayValue = calc.sum(x, y);
+        display.textContent = displayValue;
+        x = '';
+        y = '';
+        op = '';
+        
+    }else if (op == '-'){
+        displayValue = calc.sub(x, y);
+        display.textContent = displayValue;
+        x = '';
+        y = '';
+        op = '';
+        
+    }else if (op == '*'){
+        displayValue = calc.mul(x, y);
+        display.textContent = displayValue;
+        x = '';
+        y = '';
+        op = '';
+        
+    }else if (op == '÷'){
+        displayValue = calc.div(x, y);
+        display.textContent = displayValue;
+        x = '';
+        y = '';
+        op = '';
+        
+    }
+}
+}
 
 
 
@@ -58,8 +129,8 @@ let calc = {
                 return x * y;
     },
     div (x, y) {
-        if (y === 0){
-            alert('You can not divide by zero in classic Arithmetic!');
+        if (y == 0){
+            console.log('You can not divide by zero in classic Arithmetic!');
             return 0;
         }
                 return x / y;
