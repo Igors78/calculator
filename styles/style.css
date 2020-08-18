@@ -56,7 +56,7 @@ body {
   height: 450px;
 }
 
-.block__display {
+.block__screen {
   background: white;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;

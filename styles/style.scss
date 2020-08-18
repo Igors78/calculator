@@ -46,7 +46,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
     align-items: stretch;
     height: 450px;
 }
-.block__display {
+.block__screen {
     background: white;
     align-self: center;
     font-size: 25px;
@@ -81,7 +81,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
 }
 
 .block__item {
-    &:hover {
+    &:hover, &:focus {
         background: rgb(208, 218, 215);
         cursor: pointer;
         border-radius: 5px;
@@ -94,7 +94,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
     border-radius: 5px;
     box-shadow: 0 0 0 5px hsl(0, 0%, 80%);
     margin: 5px;
-    &:active {font-size: 30px;}
+    &:active, &:focus {font-size: 30px;}
     
 }
 .operator {
