@@ -34,6 +34,10 @@ body {
   background: -webkit-gradient(linear, left top, left bottom, from(#f0f9ff), color-stop(47%, #cbebff), to(#a1dbff));
   background: linear-gradient(to bottom, #f0f9ff 0%, #cbebff 47%, #a1dbff 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', endColorstr='#a1dbff',GradientType=0 );
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   border: 2px solid black;
   border-radius: 10px;
   padding: 5px;
@@ -62,15 +66,12 @@ body {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 100%;
           flex: 0 1 100%;
+  text-align-last: right;
   border: 1px solid black;
   border-radius: 5px;
   padding: 10px 5px 0px 0px;
   font-family: Verdana, sans-serif;
   line-height: 30px;
-}
-
-.block__display p {
-  text-align: right;
 }
 
 .block__del, .block__reset {
@@ -84,6 +85,7 @@ body {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 40%;
           flex: 0 1 40%;
+  text-align: center;
   border: 1px solid black;
   -webkit-box-shadow: 0 0 0 5px #cccccc;
           box-shadow: 0 0 0 5px #cccccc;
@@ -91,17 +93,13 @@ body {
   line-height: 30px;
 }
 
-.block__del :hover, .block__reset :hover {
+.block__del:hover, .block__reset:hover {
   background: #d0dad7;
   cursor: pointer;
   border-radius: 5px;
 }
 
-.block__del p, .block__reset p {
-  text-align: center;
-}
-
-.block__del :active, .block__reset :active {
+.block__del:active, .block__reset:active {
   font-size: 20px;
 }
 
@@ -113,6 +111,7 @@ body {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 20%;
           flex: 0 1 20%;
+  text-align: center;
   border: 1px solid black;
   border-radius: 5px;
   -webkit-box-shadow: 0 0 0 5px #cccccc;
@@ -120,17 +119,13 @@ body {
   margin: 5px;
 }
 
-.block__item :hover {
+.block__item:hover {
   background: #d0dad7;
   cursor: pointer;
   border-radius: 5px;
 }
 
-.block__item p {
-  text-align: center;
-}
-
-.block__item :active {
+.block__item:active {
   font-size: 30px;
 }
 
@@ -140,5 +135,9 @@ body {
 
 #enter {
   background: #f3b304;
+}
+
+#enter:hover {
+  background: #0edeec;
 }
 /*# sourceMappingURL=style.css.map */

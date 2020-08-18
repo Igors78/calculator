@@ -35,7 +35,7 @@ background: -moz-linear-gradient(top,  rgba(240,249,255,1) 0%, rgba(203,235,255,
 background: -webkit-linear-gradient(top,  rgba(240,249,255,1) 0%,rgba(203,235,255,1) 47%,rgba(161,219,255,1) 100%);
 background: linear-gradient(to bottom,  rgba(240,249,255,1) 0%,rgba(203,235,255,1) 47%,rgba(161,219,255,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', endColorstr='#a1dbff',GradientType=0 );
-
+    user-select: none;
     border: 2px solid black;
     border-radius: 10px;
     padding: 5px;
@@ -52,9 +52,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
     font-size: 25px;
     margin: 0px;
     flex: 0 1 100%;
-    p {
-        text-align: right;
-    }
+    text-align-last: right;
     border: 1px solid black;
     border-radius: 5px;
     padding: 10px 5px 0px 0px;
@@ -62,7 +60,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
     line-height: 30px;
 }
 .block__del, .block__reset {
-    :hover {
+    &:hover {
         background: rgb(208, 218, 215);
         cursor: pointer;
         border-radius: 5px;
@@ -73,19 +71,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
     font-size: 15px;
     margin: 5px;
     flex: 0 1 40%;
-    p {
-        text-align: center;
-    }
+    text-align: center;
     border: 1px solid black;
     box-shadow: 0 0 0 5px hsl(0, 0%, 80%);
     font-family: Chilanka, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 30px;
-    :active {
+    &:active {
     font-size: 20px;}
 }
 
 .block__item {
-    :hover {
+    &:hover {
         background: rgb(208, 218, 215);
         cursor: pointer;
         border-radius: 5px;
@@ -93,14 +89,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
     background: white;
     align-self: center;
     flex: 0 1 20%;
-    p {
-        text-align: center;
-    }
+    text-align: center;
     border: 1px solid black;
     border-radius: 5px;
     box-shadow: 0 0 0 5px hsl(0, 0%, 80%);
     margin: 5px;
-    :active {
+    &:active {
         font-size: 30px;}
     
 }
@@ -109,4 +103,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
 }
 #enter {
     background: rgb(243, 179, 4);
+    &:hover {
+        background: rgb(14, 222, 236);
+    }
 }
