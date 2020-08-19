@@ -28,7 +28,7 @@ function updateDisplay(e) {
         count = 0;
         display.textContent = displayValue;
     }else
-    if (display.textContent.length == 16) {
+    if (displayValue.length == 16) {
         return;
     }else if (display.textContent === '0' && e.target.textContent == 0){
         return;
@@ -140,60 +140,88 @@ function calculate(e) {
 
 let calc = {
     sum (x, y) {
-                return x + y;
+        let result = x + y;
+        result = +result.toFixed(2);
+        return result;
     },
     sub (x, y) {
-                return x - y;
+        let result = x - y;
+        result = +result.toFixed(2);
+        return result;
     },
     mul (x, y) {
-                return x * y;
+        let result = x * y;
+        result = +result.toFixed(2);
+        return result;
     },
     div (x, y) {
         if (y == 0){
             console.log('You can not divide by zero in classic Arithmetic!');
-            return 0;
+            return 'You can not divide by zero in classic Arithmetic!';
         }
-                return x / y;
+        let result = x / y;
+        result = +result.toFixed(2);
+        return result;
     }
 }
 
 // add key support
 document.addEventListener("keydown", function(e) {
-    let code = e.which;
+    let code = e.key;
     switch(code) {
-        case 48:
+        case '0':
             document.querySelector("#zero").click();
         break;
-        case 49:
+        case '1':
             document.querySelector("#one").click();
-            document.querySelector("#one").focus();
         break;
-        case 50:
+        case '2':
             document.querySelector("#two").click();
         break;
-        case 51:
+        case '3':
             document.querySelector("#three").click();
         break;
-        case 52:
+        case '4':
             document.querySelector("#four").click();
         break;
-        case 53:
+        case '5':
             document.querySelector("#five").click();
         break;
-        case 54:
+        case '6':
             document.querySelector("#six").click();
         break;
-        case 55:
+        case '7':
             document.querySelector("#seven").click();
         break;
-        case 56:
+        case '8':
             document.querySelector("#eigth").click();
         break;
-        case 57:
+        case '9':
             document.querySelector("#nine").click();
         break;
-        case 45:
+        case '-':
             document.querySelector("#minus").click();
+        break;
+        case '+':
+            document.querySelector("#plus").click();
+        break;
+        case '*':
+            document.querySelector("#mult").click();
+        break;
+        case '/':
+            document.querySelector("#divide").click();
+        break;
+        case '.':
+            document.querySelector("#period").click();
+        break;
+        case 'Enter':
+            document.querySelector("#enter").click();
+        break;
+        case 'Backspace':
+            document.querySelector("#del").click();
+        break;
+        case 'Delete':
+            document.querySelector("#reset").click();
         break;
     }
 });

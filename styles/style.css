@@ -72,6 +72,7 @@ body {
   padding: 10px 5px 0px 0px;
   font-family: Verdana, sans-serif;
   line-height: 30px;
+  overflow: hidden;
 }
 
 .block__del, .block__reset {
@@ -119,13 +120,13 @@ body {
   margin: 5px;
 }
 
-.block__item:hover {
+.block__item:hover, .block__item:focus {
   background: #d0dad7;
   cursor: pointer;
   border-radius: 5px;
 }
 
-.block__item:active {
+.block__item:active, .block__item:focus {
   font-size: 30px;
 }
 
@@ -139,5 +140,9 @@ body {
 
 #enter:hover {
   background: #0edeec;
+}
+
+#buffer {
+  font-size: 13px;
 }
 /*# sourceMappingURL=style.css.map */

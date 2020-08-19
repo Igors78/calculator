@@ -58,6 +58,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
     padding: 10px 5px 0px 0px;
     font-family: Verdana, sans-serif;
     line-height: 30px;
+    overflow: hidden;
 }
 .block__del, .block__reset {
     &:hover {
@@ -105,4 +106,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
     &:hover {
         background: rgb(14, 222, 236);
     }
+}
+#buffer {
+    font-size: 13px;
 }
